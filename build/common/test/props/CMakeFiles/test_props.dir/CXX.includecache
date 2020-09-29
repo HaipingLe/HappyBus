@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../common/src/props/IsSame.hpp
+
+/home/hubert/work/MyCode/HappyBus/common/test/props/IsSameTest.cpp
+IsSameTest.hpp
+/home/hubert/work/MyCode/HappyBus/common/test/props/IsSameTest.hpp
+
+/home/hubert/work/MyCode/HappyBus/common/test/props/IsSameTest.hpp
+cppunit/extensions/HelperMacros.h
+-
+props/IsSame.hpp
+/home/hubert/work/MyCode/HappyBus/common/test/props/props/IsSame.hpp
+

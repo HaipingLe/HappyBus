@@ -1,0 +1,9 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT(HappyBus)
+
+enable_testing()
+
+SET(CMAKE_C_COMPILER "/usr/bin/gcc")
+SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
+ADD_COMPILE_OPTIONS(-std=c++11)
+ADD_SUBDIRECTORY(common)
