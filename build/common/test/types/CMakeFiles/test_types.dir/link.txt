@@ -1,1 +1,0 @@
-/usr/bin/g++    -rdynamic CMakeFiles/test_types.dir/BooleanTest.cpp.o CMakeFiles/test_types.dir/main.cpp.o  -o ../../../Test/test_types  -lcppunit 

@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC   -shared -Wl,-soname,libHappyBusCommon.so -o libHappyBusCommon.so CMakeFiles/HappyBusCommon.dir/errors/BaseException.cpp.o CMakeFiles/HappyBusCommon.dir/system/Mutex.cpp.o CMakeFiles/HappyBusCommon.dir/system/posix/POSIXMutex.cpp.o 
