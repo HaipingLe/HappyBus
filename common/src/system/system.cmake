@@ -4,7 +4,9 @@
 
 # Common source files
 SET( SRC_COMMON  ./system/Mutex.cpp
-                 ./system/Mutex.hpp)
+                 ./system/Mutex.hpp
+                 ./system/AtomicInteger.hpp
+                 ./system/AtomicInteger.cpp)
 
 # Source files for POSIX
 SET( SRC_POSIX
@@ -13,7 +15,7 @@ SET( SRC_POSIX
 IF(WIN32)
 
 ELSEIF(APPLE)
-
+     SET (SOURCES ${SOURCES} ${SRC_COMMON} ${SRC_POSIX})
 ELSE (UNIX)
      SET (SOURCES ${SOURCES} ${SRC_COMMON} ${SRC_POSIX})
 ENDIF()

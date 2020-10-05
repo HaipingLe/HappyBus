@@ -1,1 +1,0 @@
-/usr/bin/g++    -rdynamic CMakeFiles/test_props.dir/IsSameTest.cpp.o CMakeFiles/test_props.dir/main.cpp.o  -o ../../../Test/test_props  -lcppunit 

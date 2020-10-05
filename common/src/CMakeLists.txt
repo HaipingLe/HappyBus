@@ -14,6 +14,10 @@ FILE( GLOB_RECURSE SOURCES
          ./props/*.[ch]pp
          ./types/*.[ch]pp
          ./errors/*.[ch]pp
+         ./Assert.[ch]pp
+         ./Compiler.hpp
+         ./fatal.hpp
+         ./ctassert.hpp
    )
 
 

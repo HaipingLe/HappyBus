@@ -40,7 +40,7 @@ enum SchedulingPolicy
 /*
  *  UNIX-like OS
  */
-#if defined(TARGET_OS_UNIX)
+#if defined(TARGET_OS_UNIX) || defined(__APPLE__)
 #include <pthread.h>
 #include <semaphore.h>
 typedef pthread_t thread_id_t;
@@ -48,7 +48,7 @@ typedef int32_t os_priority_t;
 typedef pthread_mutex_t mutex_t;
 typedef pthread_mutex_t smallmutex_t;
 
-#if defined(TARGET_OS_POSIX_LINUX)
+#if defined(TARGET_OS_POSIX_LINUX) 
 struct semaphore_t;
 #else
 typedef sem_t semaphore_t;
