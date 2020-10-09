@@ -47,13 +47,6 @@ typedef pthread_t thread_id_t;
 typedef int32_t os_priority_t;
 typedef pthread_mutex_t mutex_t;
 typedef pthread_mutex_t smallmutex_t;
-
-#if defined(TARGET_OS_POSIX_LINUX) 
-struct semaphore_t;
-#else
-typedef sem_t semaphore_t;
-#endif
-
 typedef pthread_key_t tls_key_t;
 struct os_onceinit_t
 {
