@@ -19,27 +19,41 @@ namespace test
 {
 namespace types
 {
-void BooleanTest::test_constructor_argumentOfTypeBool_shouldNotNull()
+void BooleanTest::testConstructor()
 {
-    bool base = false;
-    std::auto_ptr<Boolean> booleanPtr(new Boolean(base));
-    CPPUNIT_ASSERT(NULL != booleanPtr.get());
+    bool base1 = true;
+    std::unique_ptr<Boolean> booleanPtr1(new Boolean(base1));
+    CPPUNIT_ASSERT(NULL != booleanPtr1.get());
+
+    bool base2 = false;
+    std::unique_ptr<Boolean> booleanPtr2(new Boolean(base2));
+    CPPUNIT_ASSERT(NULL != booleanPtr2.get());
 }
 
-void BooleanTest::test_copyConstructor_aBooleanObject_shouldNotNull()
+void BooleanTest::testCopyConstructor()
 {
-    bool base = false;
-    Boolean boolean(base);
-    std::auto_ptr<Boolean> booleanCopyPtr(new Boolean(boolean));
-    CPPUNIT_ASSERT(NULL != booleanCopyPtr.get());
+    bool base1 = true;
+    Boolean boolean1(base1);
+    std::unique_ptr<Boolean> booleanCopyPtr1(new Boolean(boolean1));
+    CPPUNIT_ASSERT(NULL != booleanCopyPtr1.get());
+
+    bool base2 = false;
+    Boolean boolean2(base2);
+    std::unique_ptr<Boolean> booleanCopyPtr2(new Boolean(boolean2));
+    CPPUNIT_ASSERT(NULL != booleanCopyPtr2.get());
 }
 
-void BooleanTest::test_bool_castObjectTobool_shouldReturnMember()
+void BooleanTest::testCastObjectTobool()
 {
-    bool base = false;
-    Boolean boolean(base);
+    bool base1 = true;
+    Boolean boolean1(base1);
+    CPPUNIT_ASSERT_EQUAL(true, static_cast<bool>(boolean1));
 
-    CPPUNIT_ASSERT_EQUAL(base, static_cast<bool>(boolean));
+    bool base2 = true;
+    Boolean boolean2(base2);
+    CPPUNIT_ASSERT_EQUAL(false, static_cast<bool>(boolean2));
+
+
 }
 
 }  // namespace types
