@@ -49,7 +49,7 @@ void BooleanTest::testCastObjectTobool()
     Boolean boolean1(base1);
     CPPUNIT_ASSERT_EQUAL(true, static_cast<bool>(boolean1));
 
-    bool base2 = true;
+    bool base2 = false;
     Boolean boolean2(base2);
     CPPUNIT_ASSERT_EQUAL(false, static_cast<bool>(boolean2));
 
