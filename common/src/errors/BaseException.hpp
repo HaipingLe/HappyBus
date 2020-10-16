@@ -17,7 +17,9 @@
 #include <string>
 
 #include "types/Boolean.hpp"
-#include "types/SmartPtr.hpp"
+//Do not use this claa again because we can use std::shared_ptr directly.
+//#include "types/SmartPtr.hpp"
+#include <memory>
 #include "Compiler.hpp"
 #include "props/Cloneable.hpp"
 
@@ -73,7 +75,8 @@ public:
     /**
     * Pointer to an exception.
     */
-    typedef happybus::common::types::SmartPtr<BaseException> ExceptionPtr;
+    //typedef happybus::common::types::SmartPtr<BaseException> ExceptionPtr;
+    typedef std::shared_ptr<BaseException> ExceptionPtr;
 
     /**
     * Ordered list of multiple exceptions.
