@@ -11,17 +11,14 @@ ENDIF()
 
 
 FILE( GLOB_RECURSE SOURCES
-         ./props/*.[ch]pp
-         ./types/*.[ch]pp
-         ./errors/*.[ch]pp
-         ./Assert.[ch]pp
-         ./Compiler.hpp
-         ./fatal.hpp
-         ./ctassert.hpp
+         props/*.[ch]pp
+         types/*.[ch]pp
+         errors/*.[ch]pp
+         Assert.[ch]pp
+         Compiler.hpp
+         fatal.hpp
+         ctassert.hpp
    )
 
-
-
 INCLUDE ("system/system.cmake")
-
 ADD_LIBRARY("HappyBusCommon" SHARED ${SOURCES})
