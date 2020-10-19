@@ -3,7 +3,7 @@
 #################################################
 
 # Common source files
-SET( SRC_COMMON  system/os/OsMutex.hpp
+SET( SRC_COMMON  system/os/OSMutex.hpp
                  system/os/Types.hpp
                  system/Mutex.cpp
                  system/Mutex.hpp
