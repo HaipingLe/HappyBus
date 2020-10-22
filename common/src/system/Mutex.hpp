@@ -31,8 +31,8 @@ namespace os
 namespace condvar
 {
 
-extern void wait(condvar_t &, Mutex &);
-extern bool wait(condvar_t &, Mutex &, uint32_t);
+extern void wait(cond_var_t &, Mutex &);
+extern bool wait(cond_var_t &, Mutex &, uint32_t);
 
 } // namespace condvar
 } // namespace os
@@ -106,8 +106,8 @@ private:
     mutex_t mMutex;
 
     // needed by SWCondVar.cpp to emulate CondVars
-    friend void os::condvar::wait(condvar_t &, Mutex &);
-    friend bool os::condvar::wait(condvar_t &, Mutex &, uint32_t);
+    friend void os::condvar::wait(cond_var_t &, Mutex &);
+    friend bool os::condvar::wait(cond_var_t &, Mutex &, uint32_t);
 };
 
 } // namespace system

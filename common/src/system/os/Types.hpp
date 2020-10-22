@@ -47,6 +47,7 @@ typedef pthread_t thread_id_t;
 typedef int32_t os_priority_t;
 typedef pthread_mutex_t mutex_t;
 typedef pthread_mutex_t smallmutex_t;
+typedef pthread_cond_t cond_var_t;
 typedef sem_t semaphore_t;
 typedef pthread_key_t tls_key_t;
 struct os_onceinit_t
@@ -54,7 +55,6 @@ struct os_onceinit_t
     bool m_Flag;
     pthread_mutex_t m_Mutex;
 };
-typedef pthread_cond_t condvar_t;
 #define OS_ONCEINIT                      \
     {                                    \
         false, PTHREAD_MUTEX_INITIALIZER \
