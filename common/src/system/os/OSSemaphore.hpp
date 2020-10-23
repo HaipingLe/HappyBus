@@ -43,7 +43,7 @@ sem_open()               sem_init()
 sem_close()                  sem_destroy()
 sem_unlink()
 
-In my project, i would like to use the unamed semaphore(memory-based), which only worksduring 
+In my project, i would like to use the unamed semaphore(memory-based), which only works during
 multiple threads within one process.
 */
 
