@@ -9,14 +9,13 @@
 /// All rights reserved
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef TSD_COMMON_SYSTEM_OSCONDVAR_HPP
-#define TSD_COMMON_SYSTEM_OSCONDVAR_HPP
+#ifndef HAPPYBUS_COMMON_SYSTEM_OSCONDVAR_HPP
+#define HAPPYBUS_COMMON_SYSTEM_OSCONDVAR_HPP
 
-#include <tsd/common/system/Mutex.hpp>
-#include <tsd/common/types/typedef.hpp>
-#include <tsd/common/system/os/Types.hpp>
+#include "system/Mutex.hpp"
+#include "system/os/Types.hpp"
 
-namespace happyubus
+namespace happybus
 { 
 namespace common 
 { 
@@ -43,16 +42,21 @@ There are six related POSIX APIs for condition variable as follows:
     Therefore, I think the OS independent condition variable should also contain the similar functions listed above.
 
     Conditons variable should be combined with mutex and here is a simple example:
-     https://www.zhihu.com/search?type=content&q=linux%20%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F
+    https://zhuanlan.zhihu.com/p/98427480
+    https://zhuanlan.zhihu.com/p/136431212
 */
 extern void init(cond_var_t&);
 extern void destroy(cond_var_t&);
 
-extern void wait(cond_var_t&, tsd::common::system::Mutex&);
-extern bool wait(cond_var_t&, tsd::common::system::Mutex&, uint32_t);
+extern void wait(cond_var_t&, happybus::common::system::Mutex&);
+extern bool wait(cond_var_t&, happybus::common::system::Mutex&, uint32_t);
 extern void signal(cond_var_t&);
 extern void broadcast(cond_var_t&);
 
-}}}}}
+}
+}
+}
+}
+}
 
 #endif
