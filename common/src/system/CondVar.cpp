@@ -3,7 +3,7 @@
 ///
 /// @author Hubert lehaiping@126.com
 ///
-/// @brief Implementation of OS Independence Condition Variable
+/// @brief Implementation of OS Independent Condition Variable
 ///
 /// Copyright (c) 2019 XXX
 /// All rights reserved
